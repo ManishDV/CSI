@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,23 +9,24 @@
     tools:context=".FaqActivity">
 
 
-
     <ExpandableListView
+        android:id="@+id/expView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?android:attr/actionBarSize"
-        android:id="@+id/expView"
+        android:animateLayoutChanges="false"
         android:childDivider="@color/colorPrimaryDark"
         android:divider="#0000FF"
         android:dividerHeight="2dp"
         android:groupIndicator="@null"
-        android:animateLayoutChanges="false"
-        android:transitionGroup="true"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        android:paddingBottom="10dp"
         android:importantForAutofill="auto"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
 
-        />
-</RelativeLayout>
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:transitionGroup="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

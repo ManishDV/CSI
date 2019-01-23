@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".SignupActivity" />
         <activity android:name=".userPic" />
-        <activity android:name=".FaqActivity"></activity>
+        <activity android:name=".FaqActivity" />
+        <activity android:name=".EmailVarification"></activity>
     </application>
 
 </manifest>

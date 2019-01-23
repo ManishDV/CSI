@@ -14,4 +14,5 @@
     <string name="sign_up_now">SIGN UP NOW</string>
     <string name="login">Login</string>
     <string name="string_faq">FAQ</string>
+    <string name="check_status">Check Status</string>
 </resources>
