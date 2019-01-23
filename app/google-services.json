@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "527275016861",
+    "firebase_url": "https://enthusiacsi.firebaseio.com",
+    "project_id": "enthusiacsi",
+    "storage_bucket": "enthusiacsi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527275016861:android:4c147a8db4af39fb",
+        "android_client_info": {
+          "package_name": "testapp.example.com.csi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527275016861-etdpk44mfvvq9a7vjlqm6jh30j3ckatn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0a8q8JcR4_DSk96VKvrd2SdyofjehIIo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
