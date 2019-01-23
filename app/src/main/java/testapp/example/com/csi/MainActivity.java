@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     EditText pass, email;
-    ProgressBar pg;
+    ProgressBar pb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,8 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email_e);
         pass = findViewById(R.id.pass_e);
         mAuth = FirebaseAuth.getInstance();
-        //pg = findViewById(R.id.progressBar);
-        //   pg.setIndeterminate(false);
-        //   pg.setVisibility(View.GONE);
+        pb = findViewById(R.id.proBar);
+
 
     }
 
@@ -39,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         String username = email.getText().toString();
         String passWord = pass.getText().toString();
 
-        pg = new ProgressBar(getApplicationContext());
-        pg.setIndeterminate(true);
+
 
         //Basic Validations
         if (username.isEmpty()) {
@@ -62,13 +60,14 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        //REAL CODE STARTS HERE
-        pg.setVisibility(View.VISIBLE);
+
+        pb.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(username, passWord).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 //IF LOG IN IS SUCCESSFULL
                 if (task.isSuccessful()) {
+                    pb.setVisibility(View.GONE);
                     Toast.makeText(MainActivity.this, "WELCOME", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(MainActivity.this, userPic.class);
                     startActivity(i);
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        pg.setVisibility(View.GONE);
+
 
     }
 
