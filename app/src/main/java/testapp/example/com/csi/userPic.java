@@ -20,14 +20,14 @@ public class userPic extends AppCompatActivity {
     DatabaseReference eventFB;
     FirebaseUser user;
     FirebaseAuth auth;
-    TextView veri;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_pic);
 
-        veri = findViewById(R.id.veriId);
+
         eventFB = FirebaseDatabase.getInstance().getReference("Event");
         EthusiaEvents c = new EthusiaEvents(1, "E", "HALWA", 9.0f);
         auth = FirebaseAuth.getInstance();

@@ -10,9 +10,15 @@
     <string name="sign_out">Sign Out</string>
     <string name="faq">FAQ</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="sign_up_now">Need a Account? CREATE ACCOUNT </string>
+    <string name="password">PASSWORD</string>
     <string name="login">Login</string>
     <string name="string_faq">FAQ</string>
     <string name="check_status">Check Status</string>
+
+    <string name="Login_Discription">The Ethusia Is an Event Organizaed by Computer Sociaty of India I don\'t know why anyone would use a sweep, but I am including it for completeness.</string>
+
+    <string name="Welcome">Welcome To Enthusia</string>
+    <string name="learn_more">Learn More</string>
+    <string name="sign_up">Sign UP</string>
+    <string name="username">USERNAME</string>
 </resources>

@@ -1,18 +1,15 @@
 package testapp.example.com.csi;
 
-import android.content.Intent;
 import android.database.DataSetObserver;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,10 +68,11 @@ public class FaqActivity extends AppCompatActivity {
         anslist.clear();
         for (DataSnapshot ds : dataSnapshot.getChildren()) {
             QueAns qu = new QueAns();
+
             try {
                 for (int j = 1; j <= ds.getChildrenCount(); j++) {
-                    qu.setQuestion(ds.child(String.valueOf(j)).getValue(QueAns.class).getQuestion());
-                    qu.setAnswer(ds.child(String.valueOf(j)).getValue(QueAns.class).getAnswer());
+                    qu.setQuestion(Objects.requireNonNull(ds.child(String.valueOf(j)).getValue(QueAns.class)).getQuestion());
+                    qu.setAnswer(Objects.requireNonNull(ds.child(String.valueOf(j)).getValue(QueAns.class)).getAnswer());
 
 
                     Quelist.add(qu.getQuestion());
@@ -87,7 +85,7 @@ public class FaqActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
             }
 
-            ArrayAdapter<String> adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, Quelist);
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, Quelist);
             adapter1 = new ExpandableListAdapter() {
                 @Override
                 public void registerDataSetObserver(DataSetObserver dataSetObserver) {
@@ -102,15 +100,15 @@ public class FaqActivity extends AppCompatActivity {
                 @Override
                 public int getGroupCount() {
 
-                    quest = new String[Quelist.toArray().length];
+                    quest = new String[Objects.requireNonNull(Quelist.toArray()).length];
                     quest = Quelist.toArray(quest);
 
-                    return Quelist.toArray().length;
+                    return Objects.requireNonNull(Quelist.toArray()).length;
                 }
 
                 @Override
                 public int getChildrenCount(int i) {
-                    ansS = new String[Quelist.toArray().length];
+                    ansS = new String[Objects.requireNonNull(anslist.toArray()).length];
                     ansS = anslist.toArray(ansS);
 
                     return 1;

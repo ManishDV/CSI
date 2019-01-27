@@ -14,13 +14,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 //LOGIN ACTIVITY
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     EditText pass, email;
-    ProgressBar pb;
+    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,16 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email_e);
         pass = findViewById(R.id.pass_e);
         mAuth = FirebaseAuth.getInstance();
-        pb = findViewById(R.id.proBar);
+        user = mAuth.getCurrentUser();
+        if(user != null)
+            toUser();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
 
 
     }
@@ -61,16 +71,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        pb.setVisibility(View.VISIBLE);
+
         mAuth.signInWithEmailAndPassword(username, passWord).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 //IF LOG IN IS SUCCESSFULL
                 if (task.isSuccessful()) {
-                    pb.setVisibility(View.GONE);
+
                     Toast.makeText(MainActivity.this, "WELCOME", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(MainActivity.this, userPic.class);
-                    startActivity(i);
+                    toUser();
+
                 }
                 //DISPLAY ERROR
                 else {
@@ -84,6 +94,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void SignUp(View view) {
         Intent i = new Intent(this, SignupActivity.class);
+        startActivity(i);
+    }
+
+    void toUser()
+    {
+        Intent i = new Intent(MainActivity.this, userPic.class);
         startActivity(i);
     }
 }
