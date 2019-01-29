@@ -15,7 +15,7 @@ import com.google.firebase.database.ValueEventListener;
 public class EventDiscription extends AppCompatActivity {
 
     String key;
-    TextView name, disp, price;
+    TextView name, disp, price,maxParticipent;
     EthusiaEvents Event = new EthusiaEvents();
     FirebaseDatabase mDb = FirebaseDatabase.getInstance();
     DatabaseReference mRef = mDb.getReference();
@@ -30,6 +30,7 @@ public class EventDiscription extends AppCompatActivity {
         name = findViewById(R.id.Event_name);
         price = findViewById(R.id.Event_price);
         disp = findViewById(R.id.Event_description);
+        maxParticipent = findViewById(R.id.Event_maxP);
 
         mRef = FirebaseDatabase.getInstance().getReference("Events").child(key);
         mRef.addValueEventListener(new ValueEventListener() {
@@ -39,6 +40,7 @@ public class EventDiscription extends AppCompatActivity {
                 name.setText(Event.getName());
                 price.setText(Float.toString(Event.getPrice()));
                 disp.setText(Event.getDescription());
+                maxParticipent.setText(Integer.toString(Event.getMaxParticipent()));
 
             }
 

@@ -2,19 +2,22 @@ package testapp.example.com.csi;
 
 public class EthusiaEvents {
 
-    int id;
+    int id, maxParticipent;
     String name;
     String description;
     float price;
 
+    public EthusiaEvents() {
+    }
 
-    public EthusiaEvents(){};
-    public EthusiaEvents(int id, String name, String disp, float price) {
+    public EthusiaEvents(int id, int maxParticipent, String name, String description, float price) {
         this.id = id;
+        this.maxParticipent = maxParticipent;
         this.name = name;
-        this.description = disp;
+        this.description = description;
         this.price = price;
     }
+
 
     public int getId() {
         return id;
@@ -22,6 +25,14 @@ public class EthusiaEvents {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getMaxParticipent() {
+        return maxParticipent;
+    }
+
+    public void setMaxParticipent(int maxParticipent) {
+        this.maxParticipent = maxParticipent;
     }
 
     public String getName() {
@@ -47,8 +58,6 @@ public class EthusiaEvents {
     public void setPrice(float price) {
         this.price = price;
     }
-
-
 
 
 }
