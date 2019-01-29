@@ -6,18 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 
 public class userPic extends AppCompatActivity {
 
-    DatabaseReference eventFB;
+
     FirebaseUser user;
     FirebaseAuth auth;
 
@@ -26,8 +22,6 @@ public class userPic extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_pic);
-
-
 
 
         auth = FirebaseAuth.getInstance();
@@ -70,12 +64,6 @@ public class userPic extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-        if (!user.isEmailVerified()) {
-            Toast.makeText(this, "Please Verify Email First!", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this, EmailVarification.class);
-            startActivity(i);
-        }
 
 
     }
