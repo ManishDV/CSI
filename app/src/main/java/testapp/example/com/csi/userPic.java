@@ -28,11 +28,10 @@ public class userPic extends AppCompatActivity {
         setContentView(R.layout.activity_user_pic);
 
 
-        eventFB = FirebaseDatabase.getInstance().getReference("Event");
-        EthusiaEvents c = new EthusiaEvents(1, "E", "HALWA", 9.0f);
+
+
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
-        eventFB.setValue(c);
 
 
     }
@@ -58,6 +57,10 @@ public class userPic extends AppCompatActivity {
             case R.id.faq_tag:
                 Intent intent = new Intent(userPic.this, FaqActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.events_tag:
+                Intent i2 = new Intent(userPic.this, EventsListActivity.class);
+                startActivity(i2);
                 break;
         }
 

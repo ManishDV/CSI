@@ -8,7 +8,7 @@ public class EthusiaEvents {
     float price;
 
 
-
+    public EthusiaEvents(){};
     public EthusiaEvents(int id, String name, String disp, float price) {
         this.id = id;
         this.name = name;

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventsListActivity"
+    android:padding="20dp"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/e1"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:onClick="EventClick"
+        android:text="Ninja Coding"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/e2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:onClick="EventClick"
+
+        android:text="Reverse Coding"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/e3"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:onClick="EventClick"
+        android:text="Googler"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/e4"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:onClick="EventClick"
+        android:text="Quiz"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/e5"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:onClick="EventClick"
+        android:text="Data Maestro"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/e6"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:onClick="EventClick"
+        android:text="Debugger"
+        android:textSize="24sp" />
+
+</LinearLayout>
+</ScrollView>

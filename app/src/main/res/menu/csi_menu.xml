@@ -9,4 +9,7 @@
     <item
         android:id="@+id/faq_tag"
         android:title="@string/faq" />
+    <item
+        android:id="@+id/events_tag"
+        android:title="Events" />
 </menu>

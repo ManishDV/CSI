@@ -42,8 +42,8 @@ public class FaqActivity extends AppCompatActivity {
 
 
 
-        //lv = (ListView) findViewById(R.id.listv);
-        //final ArrayList <String> list = new ArrayList<>();
+//        lv = (ListView) findViewById(R.id.listv);
+//        final ArrayList <String> list = new ArrayList<>();
         mReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
