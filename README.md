@@ -14,4 +14,4 @@ FIREBASE
 1) Structure for 
         i) Events Booked Tickets
         ii) User Info
-        iii) Enroll Database
+        iii) Participant Database
