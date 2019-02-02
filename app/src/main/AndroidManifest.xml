@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".payment"></activity>
+        <activity android:name=".ParticipationForm" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/NewTheme">
@@ -30,7 +32,7 @@
         <activity
             android:name=".EventsListActivity"
             android:theme="@style/NewTheme" />
-        <activity android:name=".EventDiscription"></activity>
+        <activity android:name=".EventDiscription" />
     </application>
 
 </manifest>

@@ -21,4 +21,13 @@
     <string name="learn_more">Learn More</string>
     <string name="sign_up">Sign UP</string>
     <string name="username">USERNAME</string>
+    <string name="participant1_name">Participant1 Name</string>
+    <string name="participant1_email">participant1 Email</string>
+    <string name="participant2_name">Participant2 Name</string>
+    <string name="participant3_name">Participant3 Name</string>
+    <string name="participant4_name">Participant4 Name</string>
+    <string name="event_name">Event Name</string>
+    <string name="event_registration">EVENT REGISTRATION</string>
+    <string name="participate">Participate</string>
+    <string name="college_name">College Name</string>
 </resources>
